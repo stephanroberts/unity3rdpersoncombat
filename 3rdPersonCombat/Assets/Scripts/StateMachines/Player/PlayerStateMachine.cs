@@ -7,8 +7,14 @@ public class PlayerStateMachine : StateMachine
     [field: SerializeField] public InputReader InputReader { get; private set; }
     [field: SerializeField] public CharacterController Controller { get; private set; }
     [field: SerializeField] public GameObject CharacterModel { get; private set; }
+    [field: SerializeField] public GameObject CameraHorizontal { get; private set; }
+    [field: SerializeField] public GameObject CameraVertical { get; private set; }
+
+
     [field: SerializeField] public Animator Animator { get; private set; }
     [field: SerializeField] public float FreeLookMovementSpeed { get; private set; }
+    [field: SerializeField] public float RotationSmoothValue { get; private set; }
+
 
     public Transform MainCameraTransform { get; private set; }
 
@@ -16,7 +22,7 @@ public class PlayerStateMachine : StateMachine
 
     private void Start() {
         MainCameraTransform = Camera.main.transform;
-        SwitchState(new PlayerTestState(this));
+        SwitchState(new PlayerFreeLookState(this));
     }   
 
 }

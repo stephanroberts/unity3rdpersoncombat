@@ -4,4 +4,8 @@ The Character Animations - www.mixamo.com -> From Adobe
 
 The Model what is used as Player Character - https://opengameart.org/content/modular-rpg-characters AUTHOR: System G6
 
-The Weapom for the main Character - https://opengameart.org/content/cethiels-weapons-3d AUTHOR: drummyfish
+The Weapon for the main Character - https://opengameart.org/content/cethiels-weapons-3d AUTHOR: drummyfish
+
+Ps1 Style nature asset - https://nartier.itch.io/ps1-style-nature-assets
+
+Textures - https://polyhaven.com/textures/
