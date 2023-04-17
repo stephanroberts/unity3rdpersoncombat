@@ -58,10 +58,9 @@ public class PlayerFreeLookState : PlayerBaseState
 
     private void RotateCamera(float deltaTime) {
         float horizontalRotation = stateMachine.InputReader.LookValue.x * deltaTime * 100;
-        float verticalRotation = stateMachine.InputReader.LookValue.y * deltaTime * 100 * -1;
-        // stateMachine.CameraHorizontal.transform.rotation = Quaternion.Euler(0, 90, 0);
+        float NewVerticalRotation = stateMachine.CameraVertical.transform.localEulerAngles.x + (stateMachine.InputReader.LookValue.y * deltaTime * 100) * -1;
         stateMachine.CameraHorizontal.transform.Rotate(new Vector3(0 ,horizontalRotation, 0));
-        stateMachine.CameraVertical.transform.Rotate(new Vector3(verticalRotation, 0, 0));
+        stateMachine.CameraVertical.transform.localEulerAngles = new Vector3(NewVerticalRotation, 0,0);
     }
 
 }
